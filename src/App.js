@@ -49,8 +49,8 @@ import CusFotgotPass from "./Components/Login/CusFotgotPass";
 function App() {
 
 
-  // const [basename,setbaseurl] = useState('http://43.204.92.123/projects/smart_catering/uploads')
-  const [basename,setbaseurl] = useState('http://localhost:4008')
+  const [basename,setbaseurl] = useState('http://hybrid.srishticampus.in/smart_catering:4009')
+  // const [basename,setbaseurl] = useState('http://localhost:4008')
 
   
   const [auth, setauth] = useState(0);
@@ -74,7 +74,7 @@ function App() {
   
   return (
 
-    <BrowserRouter basename="projects/smart_catering">
+    <BrowserRouter basename="smart_catering">
       <div className="App">
         {/* <button onClick={()=>{setauth(0)}}> No Log</button>
         <button onClick={()=>{setauth(1)}}> Customer</button>
@@ -86,9 +86,44 @@ function App() {
         
         <Routes>
           <Route exact path="/" element={<Main auth={auth}/>} />
-          <Route path="/Admin" element={<AdminLog  basename={basename}/>} />
-          <Route path="/Admin/Adminpage" element={<Adminpage  basename={basename}/>} />
+          <Route path="/Register/cusreg" element={<CustomerReg  basename={basename}/>} />
+          <Route path="/Admin" element={<AdminLog  basename={basename}/>} /> 
           <Route path="/Admin/Caterer" element={<AdminCat  basename={basename}/>} />
+          <Route path="/Login/cuslog" element={<Logcus basename={basename} />} />
+          <Route path="/Login/catlog" element={<Logcat  basename={basename}/>} />
+          <Route path="/Register/catreg" element={<CatererReg  basename={basename}/>} />
+          <Route path="/Register/cusreg" element={<CustomerReg  basename={basename}/>} />
+          <Route path="/Register/charreg" element={<CharityReg  basename={basename}/>} />
+          <Route path="/CusProfile" element={<CusProfile  basename={basename}/>} />
+          <Route path="/CatProfile" element={<CatProfile  basename={basename}/>} />
+          <Route path="/CharProfile" element={<CharProfile  basename={basename}/>} />
+          <Route path="/Caterer/:id" element={<Caterer basename={basename}/>} />
+          <Route path="/AddMenu" element={<Menu basename={basename}/>} />
+          <Route path="/EditMenu/:id" element={<EditMenu basename={basename}/>} />
+          <Route path="/ViewMenu" element={<ViewCatMenu basename={basename}/>} />
+          <Route path="/Home" element={<Main basename={basename} auth={auth} />} />
+          <Route path="/About" element={<About  basename={basename}/>} />
+          <Route path="/CatComplaints" element={<CatComplaints  basename={basename}/>} />
+          <Route path="/ViewCatorder" element={<ViewCatorder basename={basename}/>} />
+          <Route path="/Service" element={<Service basename={basename} />} />
+          <Route path="/buyitem/:id" element={<Buyitem basename={basename}/>} />
+          <Route path="/CusComplaints" element={<CusComplaints basename={basename} />} />
+          <Route path="/ViewOrders" element={<ViewOrders basename={basename}/>} />
+
+          <Route path="/Login/charlog" element={<Chatlog  basename={basename}/>} />
+          <Route path="/Login/catlog" element={<Logcat  basename={basename}/>} />
+          <Route path="/ChatForgotPass" element={<ChatForgotPass  basename={basename}/>} />
+          <Route path="/CatForgotPass" element={<CatForgotPass  basename={basename}/>} />
+          <Route path="/CusForgotPass" element={<CusFotgotPass  basename={basename}/>} />
+
+
+          <Route path="/Admin/Adminpage" element={<Adminpage  basename={basename}/>} />
+          <Route path="/Admin/Customer" element={<AdminCust  basename={basename}/>} />
+          <Route path="/Admin/Charity" element={<AdminCharity basename={basename} />} />
+          <Route path="/Admin/Orders" element={<AdminOrder  basename={basename}/>} />
+          <Route path="/Admin/Complaints" element={<AdminComplaints  basename={basename}/>} />
+          {/* */}
+           {/*  <Route path="/Admin/Adminpage" element={<Adminpage  basename={basename}/>} />
           <Route path="/Admin/Customer" element={<AdminCust  basename={basename}/>} />
           <Route path="/Admin/Charity" element={<AdminCharity basename={basename} />} />
           <Route path="/Admin/Orders" element={<AdminOrder  basename={basename}/>} />
@@ -96,11 +131,8 @@ function App() {
 
           <Route path="/Home" element={<Main basename={basename} auth={auth} />} />
          
-          <Route path="/Register/cusreg" element={<CustomerReg  basename={basename}/>} />
-          <Route path="/Register/catreg" element={<CatererReg  basename={basename}/>} />
-          <Route path="/Register/charreg" element={<CharityReg  basename={basename}/>} />
+          
 
-          <Route path="/Login/cuslog" element={<Logcus basename={basename} />} />
           <Route path="/Login/charlog" element={<Chatlog  basename={basename}/>} />
           <Route path="/Login/catlog" element={<Logcat  basename={basename}/>} />
           <Route path="/ChatForgotPass" element={<ChatForgotPass  basename={basename}/>} />
@@ -131,7 +163,7 @@ function App() {
           <Route path="/buyitem/:id" element={<Buyitem basename={basename}/>} />
           <Route path="/ViewDonation" element={<ViewDonation basename={basename}/>} />
 
-          
+          */}
 
         </Routes>
         <Footer auth={auth} />

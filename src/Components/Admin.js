@@ -34,6 +34,9 @@ function AdminLog() {
       localStorage.setItem("adminlog", 1);
       alert("Logged in ");
       window.location.reload(false)
+    }else{
+      alert("Please enter valid credentials  ");
+
     }
   };
 

@@ -76,7 +76,7 @@ function Adminpage({basename}) {
                       textShadow: "2px 2px white",
                     }}
                   >
-                    Hi Admin, Welcome to the Admin Panel
+                    Hi Admin, Welcome to Hungry Hub
                   </h2>
                 </div>
                 <div className="container">
@@ -89,7 +89,7 @@ function Adminpage({basename}) {
                             src="https://static.vecteezy.com/system/resources/previews/001/974/201/original/customer-reviews-feedback-free-vector.jpg"
                             height={100}
                           />{" "}
-                          {cusdata.length} Customers Registered
+                          {cusdata.length} Customers
                         </h3>
                         <Link className="btn btn-danger" to={`/Admin/Customer`}>
                           {" "}
@@ -105,7 +105,7 @@ function Adminpage({basename}) {
                             src="https://static.vecteezy.com/system/resources/previews/001/974/201/original/customer-reviews-feedback-free-vector.jpg"
                             height={100}
                           />{" "}
-                          {catdata.length} Catering services registered
+                          {catdata.length} Catering services 
                         </h3>
                         <Link className="btn btn-danger" to={`/Admin/Caterer`}>
                           {" "}
@@ -135,7 +135,7 @@ function Adminpage({basename}) {
                             src="https://static.vecteezy.com/system/resources/previews/001/974/201/original/customer-reviews-feedback-free-vector.jpg"
                             height={100}
                           />{" "}
-                          {charitydata.length} Charities Registered
+                          {charitydata.length} Charities 
                         </h3>
                         <Link className="btn btn-danger" to={`/Admin/Charity`}>
                           {" "}
@@ -153,94 +153,7 @@ function Adminpage({basename}) {
     );
   } else {
     return (
-      <div style={{ minHeight: "400px" }}>
-        <h1 style={{ textAlign: "center", position: "relative", top: "150px" }}>
-          Please{" "}
-          <Link style={{ fontSize: "50px" }} to="/Admin">
-            log in{" "}
-          </Link>
-          to see admin panel <hr />
-          <span>
-            {" "}
-            Back to the{" "}
-            <Link style={{ fontSize: "50px" }} to="/home">
-              Home Page
-            </Link>
-
-
-
-
-
-            <div class="col-sm-12 col-md-8  align-items-center">
-
-
-                      <div class="text-start ps-4">
-                        <h5 class="mb-3">
-                          {data.empid ? data.empid.name : ""}
-                        </h5>
-                        <p class="text-truncate me-3">
-                          <i class="far fa-clock text-primary me-2"></i>
-                          {data.lop != undefined
-                            ? `Loss of Pay :${data.lop}`
-                            : null}
-                        </p>
-                      </div>
-
-                      
-                      <div class="text-start ps-4">
-                        <p class="text-truncate me-3">
-                          <i class="far fa-money-bill-alt text-primary me-2"></i>
-                          <b>
-                            {data.leave != undefined
-                              ? `Leaves Taken : ${data.leave}`
-                              : null}{" "}
-                          </b>
-                        </p>
-                        
-                        <div class="text-start ps-4">
-                          <p class="text-truncate me-3">
-                            <i class="fa fa-map-marker-alt text-primary me-2"></i>
-                            <b>
-                              {data.incentive
-                                ? `Incentive : ${data.incentive}`
-                                : ""}
-                            </b>
-                          </p>
-                        </div>
-                        <p class="text-truncate me-3">
-                          <i class="far fa-clock text-primary me-2"></i>
-                          <b>{data.sal ? `Salary : ${data.sal}` : ""}</b>
-                        </p>
-                        {/* <p class="text-truncate me-3">
-                              <i class="far fa-clock text-primary me-2"></i>
-                              Salary : {data.sal}
-                            </p> */}
-                      </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          </span>
-        </h1>
-      </div>
+      <h1>fefe</h1>
     );
   }
 }

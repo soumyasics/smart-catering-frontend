@@ -24,19 +24,19 @@ function EditMenu({basename}) {
     }
   });
 
-  // useEffect(() => {
-  //   axiosInstance
-  //     .post(`/viewFoodbyId`, {id:id})
-  //     .then((res) => {
-  //       console.log(res,' food by id ');
-  //      if(res.data.data!=undefined){
-  //       setdata(res.data.data);
-  //      }
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // }, []);
+  useEffect(() => {
+    axiosInstance
+      .post(`/viewFoodbyId`, {id:id})
+      .then((res) => {
+        console.log(res,' food by id ');
+       if(res.data.data!=undefined){
+        setdata(res.data.data);
+       }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   // food id and cat id set
   useEffect(() => {
@@ -55,7 +55,7 @@ function EditMenu({basename}) {
     e.preventDefault();
     console.log(data);
     axiosInstance
-      .post("/editFoodById", data ,{headers: {
+      .post(`/editFoodById/${id}`, data ,{headers: {
         'Content-Type': 'multipart/form-data',
       }})
       .then((res) => {

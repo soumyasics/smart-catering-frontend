@@ -353,7 +353,7 @@ function ViewCatorder({basename}) {
             <div class="card">
               {/* <img src="..." class="card-img-top" alt="..."> */}
               <div class="card-body">
-                <h5 class="card-title">No Complaints to display</h5>
+                <h5 class="card-title">No Orders to display</h5>
                
               </div>
             </div>
